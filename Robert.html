@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Registro</title>
+<Style>
+table{
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  text-align: left;
+  padding-top: 8px;
+  background-color: #3a57af;
+  color: white
+}
+td, th{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</Style>
+</head>
+
+<body>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Registro.css"
+  <div class="testbox">
+    <h1>Registration</h1>
+
+    <form action="|">
+        <hr>
+      <div class="accounttype">
+        <input type="radio" value="None" id="radioOne" name="account" checked/>
+        <label for="radioOne" class="radio" chec>Personal</label>
+        <input type="radio" value="None" id="radioTwo" name="account" />
+        <label for="radioTwo" class="radio">Compania</label>
+      </div>
+
+      <div class="gender">
+        <input type="radio" value="None" id="male" name="gender" checked/>
+        <label for="male" class="radio" chec>Hombre</label>
+        <input type="radio" value="None" id="female" name="gender" />
+        <label for="female" class="radio">Mujer</label>
+       </div>
+
+    <hr>
+    <label id="icon" for="name"><i class="icon-envelope "></i></label>
+    <input type="Nombre Cliente" name="name" id="name" placeholder="Nombre Cliente" required/>
+    <label id="icon" for="name"><i class="icon-user"></i></label>
+    <input type="Numero Telefono" name="name" id="name" placeholder="Numero Telefono" required/>
+    <label id="icon" for="name"><i class="icon-shield"></i></label>
+    <input type="RNC/ # CEDULA" name="name" id="name" placeholder="RNC/ # CEDULA" required/>
+    <label id="icon" for="name"><i class="icon-shield"></i></label>
+    <input type="concepto/prestamo" name="name"id="name" placeholder="Concepto/Prestamo" required/>
+
+
+    </form>
+  </div>
+  <p></p>
+<table>
+<tr>
+  <th>No.</th>
+  <th>Fecha</th>
+  <th>Nombre de Clientes</th>
+  <th>Concepto de Prestamo</th>
+  <th>Monto Prestamo</th>
+  <th>% de Interes</th>
+  <th>Total a Pagar $</th>
+  <th>Fecha de Pago</th>
+  <th>Fecha de Vencimiento $</th>
+  <th>Pago Redito/ Atraso</th>
+</tr>
+  <tr>
+    <td>1</td>
+    <td>23.09.2018</td>
+    <td>Jose Feliciano</td>
+    <td>Trimentral</td>
+    <td>RD$ 10,000.00</td>
+    <td>RD$ 3,500.00</td>
+    <td>RD$ 13,500.00</td>
+    <td>23.09.2019</td>
+    <td>24.09.2019</td>
+    <td>RD$ 1,000.00</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>09.03.2019</td>
+    <td>Fernando de la Cruz</td>
+    <td>Mentral</td>
+    <td>RD$ 20,000.00</td>
+    <td>RD$ 2,000.00</td>
+    <td>RD$ 22,000.00</td>
+    <td>09.03.2020</td>
+    <td>10.03.2020</td>
+    <td>NO</td>
+  </tr>
+</table>
+
+</body>
+</html>
