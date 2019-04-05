@@ -1,0 +1,63 @@
+HTML
+<form name="formulario" method="post" action="http://pagina.com/send.php">
+  <!-- Nombre de usuario.
+       Campo obligatorio, entre 5-40 carácteres -->
+  Usuario: <input type="text" name="nombre" placeholder="Por ejemplo, Juan"
+                  minlength="5" maxlength="40" required>
+  <!-- Contraseña.
+       Campo obligatorio, mínimo 11 carácteres -->
+  Password: <input type="password" name="pass" placeholder="Contraseña"
+                  minlength="11" required>
+</form>
+
+------------------------------------------PATRONES DE VALIDACION 
+
+<form name="formulario" method="post" action="http://pagina.com/send.php">
+  <!-- Nombre de usuario.
+       Campo obligatorio, entre 5-40 carácteres
+       Sólo se permiten letras y números -->
+  <input type="text" name="nombre" placeholder="Su nombre de usuario"
+         minlength="5" maxlength="40" required pattern="[A-Za-z0-9]+">
+</form>
+
+
+
+<form name="formulario" method="post" action="http://pagina.com/send.php">
+  <!-- Nombre de usuario.
+       Campo obligatorio, entre 5-40 carácteres
+       Sólo se permiten letras y números -->
+  <input type="text" name="nombre" placeholder="Su nombre de usuario"
+         required pattern="[A-Za-z0-9]{5,40}"
+         title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40">
+</form>
+
+
+
+form name="formulario" method="post" action="http://pagina.com/send.php">
+  <!-- Modelo de coche
+       Campo obligatorio, opciones posibles: A1, A3, A4 y A15
+       Sólo se permiten letras y números -->
+  <input type="text" name="coche" placeholder="Su modelo de coche"
+         required pattern="A|a(1|3|4|15)"
+         title="Modelos posibles: A1, A3, A4 y A15">
+</form>
+
+
+
+
+
+
+
+
+
+CSS
+
+input:valid, textarea:valid {
+  background:green;
+}
+input:invalid, textarea:invalid {
+  background:red;
+}
+
+
+

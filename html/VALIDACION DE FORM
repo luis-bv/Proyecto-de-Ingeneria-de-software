@@ -1,0 +1,79 @@
+PARA LA VALIDACION DE FORMULARIO UTILZAR 
+
+COMO VALIDAR UN FORMULARIO EN html 5 con required
+
+COLOCAR FAVICON
+
+
+https://www.youtube.com/watch?v=MNf7gCVmY90
+
+En HTML5 tenemos la opción “required” para poder asegurarnos de que un campo sea llenado. A continuación, veremos esta opción aplicada a 2 campos de un formulario en particular, los cuales son el de “Nombre” e “Email”:
+
+<div>
+<label for="firstname">Firstname</label>
+<input id="firstname" name="firstname" title="Es obligatorio que ingreses tu nombre" required>
+</div>
+
+Gracias a dicho atributo, estos dos campos serán requeridos al momento de enviar el formulario. Se puede modificar el mensaje de error que aparecerá si estos campos están vacíos mediante el atributo “title” tal como se mostró también en la imagen anterior. El error obtenido si los campos están vacíos es el siguiente:
+
+La segunda validación que haremos es ver que el campo “E-mail” contenga un e-mail válido. Dicha validación la lograremos cambiando el “type” del “input” a “email”, de tal manera que quede de la siguiente forma:
+	
+<div>
+<label for="email">E-mail</label>
+<input type="email" id="email" name="email" title="Es obligatorio que ingreses tu e-mail" required>
+</div>
+
+Además, el campo “Website” lo modificaremos también para que valida que la URL ingresada sea válida. Para lograr dicho objetivo, debemos agregar el atributo “type” del “input” para que contenga la palabra “url” tal como se muestra en la figura siguiente:
+
+	
+<div>
+<label for="url">Website</label>
+<input type="url" id="url" name="url" title="Debes introducir una URL valida.">
+</div>
+
+Ambos mensajes de errores también pueden ser modificados mediante el atributo “title”. Si todo está correcto, ahora veremos las validaciones pertinentes cuando intentemos realizar un envío del formulario.
+
+Por último, aquí tenemos el código completo del formulario en caso sea necesario:
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Tooltip - Forms</title>
+</head>
+<body>
+ 
+<form>
+	<fieldset>
+		<div>
+			<label for="firstname">Firstname</label>
+			<input id="firstname" name="firstname" title="Es obligatorio que ingreses tu nombre" required>
+		</div>
+		<div>
+			<label for="lastname">Lastname</label>
+			<input id="lastname" name="lastname" title="Please provide also your lastname.">
+		</div>
+		<div>
+			<label for="url">Website</label>
+			<input type="url" id="url" name="url" title="Debes introducir una URL valida.">
+		</div>
+		<div>
+			<label for="email">E-mail</label>
+			<input type="email" id="email" name="email" title="Es obligatorio que ingreses tu e-mail" required>
+		</div>
+		<div>
+			<input type="submit" value="Enviar">
+	</fieldset>
+</form>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

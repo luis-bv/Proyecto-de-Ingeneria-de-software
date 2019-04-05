@@ -27,10 +27,14 @@
 }
 
 #banner .iniciar {
-  font-size: 100%;
+  font-size: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-family: cursive;
+  text-align: center;
+
+
 }
 
 
