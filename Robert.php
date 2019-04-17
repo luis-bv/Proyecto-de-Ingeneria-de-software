@@ -1,11 +1,16 @@
-<!doctype html>
-<html lang="es">
+<?PHP
+include_once('ConBas.php');
+$consulta = laConsulta();
+?>
+<!Doctype html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <form action="index.php" method="post">
 
-<title>Registro</title>
+<title>Préstamos  & Soluciones</title>
 <Style>
 table{
   font-family: arial, sans-serif;
@@ -37,7 +42,7 @@ tr:nth-child(even) {
   <div class="testbox">
     <h1>Registration</h1>
 
-    <form action="|">
+    <form action="index.php" method="post">
         <hr>
       <div class="accounttype">
         <input type="radio" value="None" id="radioOne" name="account" checked/>
@@ -45,13 +50,6 @@ tr:nth-child(even) {
         <input type="radio" value="None" id="radioTwo" name="account" />
         <label for="radioTwo" class="radio">Compania</label>
       </div>
-
-      <div class="gender">
-        <input type="radio" value="None" id="male" name="gender" checked/>
-        <label for="male" class="radio" chec>Hombre</label>
-        <input type="radio" value="None" id="female" name="gender" />
-        <label for="female" class="radio">Mujer</label>
-       </div>
 
     <hr>
     <label id="icon" for="name"><i class="icon-envelope "></i></label>
@@ -65,7 +63,9 @@ tr:nth-child(even) {
 
 
     </form>
-  </div>
+    </div>
+
+
   <p></p>
 <table>
 <tr>
@@ -80,31 +80,43 @@ tr:nth-child(even) {
   <th>Fecha de Vencimiento $</th>
   <th>Pago Redito/ Atraso</th>
 </tr>
-  <tr>
-    <td>1</td>
-    <td>23.09.2018</td>
-    <td>Jose Feliciano</td>
-    <td>Trimentral</td>
-    <td>RD$ 10,000.00</td>
-    <td>RD$ 3,500.00</td>
-    <td>RD$ 13,500.00</td>
-    <td>23.09.2019</td>
-    <td>24.09.2019</td>
-    <td>RD$ 1,000.00</td>
+
+<?php
+while ($mostrar - $consulta->mysqli_fetch_array()) {
+
+?>
+
+   <tr>
+     <td><?php echo $mostrar['NO.'] ?><!-- 1--></td>
+    <td><?php echo $mostrar['Fecha'] ?><!-- 23.09.2018--></td>
+    <td><?php echo $mostrar['Nombre de Clientes'] ?><!-- Jose Feliciano--></td>
+    <td><?php echo $mostrar['Concepto de Prestamo'] ?><!-- Trimentral--></td>
+    <td><?php echo $mostrar['Monto Prestamo'] ?><!-- RD$ 10,000.00--></td>
+    <td><?php echo $mostrar['% de Interes'] ?><!-- RD$ 3,500.00--></td>
+    <td><?php echo $mostrar['Total a Pagar $'] ?><!-- RD$ 13,500.00--></td>
+    <td><?php echo $mostrar['Fecha de Pago'] ?><!-- 23.09.2019--></td>
+    <td><?php echo $mostrar['Fecha de Vencimiento $'] ?><!-- 24.09.2019--></td>
+    <td><?php echo $mostrar['Pago Redito/ Atraso'] ?><!-- RD$ 1,000.00--></td>
   </tr>
   <tr>
-    <td>2</td>
-    <td>09.03.2019</td>
-    <td>Fernando de la Cruz</td>
-    <td>Mentral</td>
-    <td>RD$ 20,000.00</td>
-    <td>RD$ 2,000.00</td>
-    <td>RD$ 22,000.00</td>
-    <td>09.03.2020</td>
-    <td>10.03.2020</td>
-    <td>NO</td>
+   <td><?php echo $mostrar['NO.'] ?><!-- 2--></td>
+    <td><?php echo $mostrar['Fecha'] ?><!-- 09.03.2019--></td>
+    <td><?php echo $mostrar['Nombre de Clientes'] ?><!-- Fernando de la Cruz--></td>
+    <td><?php echo $mostrar['Concepto de Prestamo'] ?><!-- Mentral--></td>
+    <td><?php echo $mostrar['Monto Prestamo'] ?><!-- RD$ 20,000.00--></td>
+    <td><?php echo $mostrar['% de Interes'] ?><!-- RD$ 2,000.00--></td>
+    <td><?php echo $mostrar['Total a Pagar $'] ?><!-- RD$ 22,000.00--></td>
+    <td><?php echo $mostrar['Fecha de Pago'] ?><!-- 09.03.2020--></td>
+    <td><?php echo $mostrar['Fecha de Vencimiento $'] ?><!-- 10.03.2020--></td>
+    <td><?php echo $mostrar['Pago Redito/ Atraso'] ?><!-- NO--></td>
   </tr>
+
+<?php
+}
+?>
+
 </table>
+
 
 </body>
 </html>
